@@ -28,7 +28,9 @@ config :logger, :console, format: "[$level] $message\n"
 
 # Configure your database
 config :chat, Chat.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "chat_dev"
+  adapter: Ecto.Adapters.MySQL,
+  username: "root",
+  password: "",
+  database: "chat_phoenix",
+  hostname: "localhost",
+  pool_size: 10
